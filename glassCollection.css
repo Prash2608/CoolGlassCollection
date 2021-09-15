@@ -1,0 +1,422 @@
+@import url("https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  scroll-behavior: auto smooth;
+}
+
+.coolNavigationBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  justify-content: space-between;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3000;
+}
+
+.coolNavigationBar a {
+  text-decoration: none;
+  color: black;
+}
+
+.coolLogo {
+  margin-left: 40px;
+  text-align: center;
+}
+
+.coolLogo img {
+  width: 60px;
+  height: 30px;
+}
+
+.coolLogin a {
+  text-transform: capitalize;
+  margin-right: 40px;
+  transition: 0.2s;
+  padding: 8px 12px;
+}
+
+.coolLogin a:hover {
+  background: black;
+  color: white;
+}
+
+.coolLinks a {
+  text-transform: uppercase;
+  margin-right: 20px;
+  font-weight: 600;
+  padding: 8px 15px;
+  transition: 0.1s;
+}
+
+.coolLinks a:hover {
+  border-bottom: 3px solid black;
+}
+
+/* Carousel */
+
+.Carousel {
+  width: 100%;
+  height: 100%;
+}
+
+.Carousel img {
+  width: 100%;
+  height: 100%;
+}
+
+.bannerImage {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.bannerImage img {
+  height: 900px;
+  width: 400px;
+
+  object-fit: cover;
+}
+
+.bannerOne,
+.bannerTwo,
+.bannerThree {
+  height: 900px;
+  width: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.bannerOne::after {
+  content: "10% OFF";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.616);
+  left: 0;
+  top: 0;
+  transform: translateY(900px);
+  transition: 0.3s;
+  color: white;
+  text-align: center;
+  line-height: 900px;
+  font-size: 5rem;
+}
+
+.bannerOne:hover::after {
+  transform: translateY(0px);
+}
+
+.bannerTwo::after {
+  content: "20% OFF";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.616);
+  left: 0;
+  top: 0;
+  transform: translateY(900px);
+  transition: 0.3s;
+  color: white;
+  text-align: center;
+  line-height: 900px;
+  font-size: 5rem;
+}
+
+.bannerTwo:hover::after {
+  transform: translateY(0px);
+}
+
+.bannerThree::after {
+  content: "30% OFF";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.616);
+  left: 0;
+  top: 0;
+  transform: translateY(900px);
+  transition: 0.3s;
+  color: white;
+  text-align: center;
+  line-height: 900px;
+  font-size: 5rem;
+}
+
+.bannerThree:hover::after {
+  transform: translateY(0px);
+}
+
+/* Top Offer */
+
+.topOffer {
+  margin-top: 40px;
+}
+.topOffer h2 {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 100;
+  color: black;
+  display: inline-block;
+  z-index: 10;
+}
+
+.offerHeading {
+  position: relative;
+
+  overflow: hidden;
+}
+.offerHeading::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(-110%);
+  background: black;
+  z-index: -5;
+  transition: 1s;
+}
+
+.offerHeading::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(110%);
+  background: black;
+  transition: 1s;
+  z-index: -4;
+}
+
+.offerHeading:hover::after {
+  transform: translateX(0%);
+  color: white;
+}
+.offerHeading:hover::before {
+  transform: translateX(0%);
+  color: white;
+}
+
+.topOffer .topHeading {
+  display: flex;
+  justify-content: center;
+}
+
+.topOffer a {
+  text-decoration: none;
+}
+
+/* Most Popular */
+.gcHeading h2 {
+  font-weight: 100;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2rem;
+  color: black;
+  padding: 20px;
+}
+
+.eyeGlassesContent hr {
+  width: 80%;
+  color: rgba(128, 128, 128, 0.52);
+  margin-left: 10%;
+}
+
+.eyeGlassesContent {
+  position: absolute;
+  top: 90px;
+  background: white;
+  width: 70%;
+  height: 400px;
+  border-radius: 10px;
+  margin-left: 15%;
+  display: none;
+  animation-name: tog;
+  padding: 40px 40px;
+}
+
+@keyframes tog {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.firstRowOfGlass {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: scroll;
+
+  height: 120px;
+}
+
+.firstRowOfGlass::-webkit-scrollbar {
+  display: none;
+}
+
+.firstRowOfGlass img {
+  width: auto;
+  object-fit: cover;
+  height: 80px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* second row of eyeGlassesContent */
+.secondRowOfGlass {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow-x: scroll;
+
+  height: 120px;
+}
+
+.secondRowOfGlass::-webkit-scrollbar {
+  display: none;
+}
+
+.secondRowOfGlass img {
+  width: auto;
+  object-fit: cover;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+/* FindYourRound */
+
+.findYourRound {
+  display: flex;
+  height: 500px;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 40px;
+  background-color: rgba(192, 192, 192, 0.226);
+}
+
+.findYourRoundUpper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 2;
+}
+
+.findYourRoundUpper a {
+  text-decoration: none;
+  color: black;
+  padding: 8px 20px;
+  border: 2px solid black;
+}
+
+.findYourRoundLower {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 100%;
+}
+
+.findCard {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.findCard img {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+}
+
+/* categories */
+.categories a {
+  text-decoration: none;
+  color: black;
+}
+.categories h2 {
+  font-size: 5rem;
+  font-weight: 100;
+
+  text-transform: uppercase;
+}
+.categories {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.offerHeading h2:hover {
+  color: white;
+}
+
+.categories img {
+  width: 400px;
+  transition: 0.6s;
+  cursor: pointer;
+}
+.categories img:hover {
+  transform: scale(1.1);
+}
+
+.categImg {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.coolFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background: rgba(192, 192, 192, 0.698);
+  padding: 60px 90px;
+}
+
+.coolFooter a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+}
+
+.copyright a {
+  font-size: 1.5rem;
+}
+
+.socialMedia {
+  word-spacing: 30px;
+}
+.socialMedia i {
+  transition: 0.3s;
+}
+
+.socialMedia i:hover {
+  transform: scale(1.5);
+}
